@@ -5,7 +5,7 @@ class Class {
   }
 
   getDisplayName() {
-    return "Class " + this.number;
+    return `Class ${this.number}`;
   }
 }
 

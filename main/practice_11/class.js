@@ -16,19 +16,19 @@ class Class {
     if (this.teacher && this.leader 
       && (this.teacher.klasses[0] === this.leader.klass 
       || this.teacher.klasses[1] === this.leader.klass)) {
-      console.log("I am " + this.teacher.name + ". I know " + student.name + " become Leader of Class " + student.klass.number + ".")
+      console.log(`I am ${this.teacher.name}. I know ${student.name} become Leader of Class ${student.klass.number}.`)
     }
   }
 
   getDisplayName() {
-    return "Class " + this.number;
+    return `Class ${this.number}`;
   }
 
   appendMember(student) {
     student.klass = this;
     if (this.teacher && (this.teacher.klasses[0] === student.klass 
       || this.teacher.klasses[1] === student.klass)) {
-      console.log("I am " + this.teacher.name + ". I know " + student.name + " has joined Class " + student.klass.number + ".")
+      console.log(`I am ${this.teacher.name}. I know ${student.name} has joined Class ${student.klass.number}.`)
     }
   }
 

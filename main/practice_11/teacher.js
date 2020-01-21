@@ -11,21 +11,25 @@ class Teacher extends Person {
   introduce() {
     var teacherClass = "No Class"
     if (this.klasses) {
-      var teacherClass = "Class " + this.klasses[0].number + ", " + this.klasses[1].number;
+      let teacherFirstClass = this.klasses[0];
+      let teacherSecondClass = this.klasses[1];
+      var teacherClass = `Class ${teacherFirstClass.number}, ${teacherSecondClass.number}`;
     }
-    return super.introduce(this.name, this.age) + " I am a Teacher. I teach " + teacherClass + ".";
+    return `${super.introduce()} I am a Teacher. I teach ${teacherClass}.`;
   }
 
   introduceWith(studentJerry) {
     if (this.klass === studentJerry.klass) {
-      return super.introduce(this.name, this.age) + " I am a Teacher. I teach Jerry."
+      return `${super.introduce()} I am a Teacher. I teach Jerry.`;
     } else {
-      return super.introduce(this.name, this.age) + " I am a Teacher. I don't teach Jerry."
+      return `${super.introduce()} I am a Teacher. I don't teach Jerry.`;
     }
   }
 
   isTeaching(student) {
-    if (this.klasses[0] === student.klass || this.klasses[1] === student.klass) {
+    let teacherFirstClass = this.klasses[0];
+    let teacherSecondClass = this.klasses[1];
+    if (teacherFirstClass === student.klass || teacherSecondClass === student.klass) {
       return true;
     } else {
       return false;

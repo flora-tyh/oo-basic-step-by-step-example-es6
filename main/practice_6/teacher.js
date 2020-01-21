@@ -11,7 +11,7 @@ class Teacher extends Person {
     if (this.klass) {
       var teacherClass = "Class " + this.klass;
     }
-    return super.introduce(this.name, this.age) + " I am a Teacher. I teach " + teacherClass + ".";
+    return `${super.introduce()} I am a Teacher. I teach ${teacherClass}.`;
   }
 }
 

@@ -7,7 +7,7 @@ class Student extends Person {
   }
 
   introduce() {
-    return super.introduce(this.name, this.age) +" I am a Student. I am at Class " + this.klass + ".";
+    return `${super.introduce()} I am a Student. I am at Class ${this.klass}.`;
   }
 }
 

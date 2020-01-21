@@ -13,14 +13,14 @@ class Teacher extends Person {
     if (this.klass) {
       var teacherClass = "Class " + this.klass.number;
     }
-    return super.introduce(this.name, this.age) + " I am a Teacher. I teach " + teacherClass + ".";
+    return `${super.introduce()} I am a Teacher. I teach ${teacherClass}.`;
   }
 
   introduceWith(studentJerry) {
     if (this.klass === studentJerry.klass) {
-      return super.introduce(this.name, this.age) + " I am a Teacher. I teach Jerry."
+      return `${super.introduce()} I am a Teacher. I teach Jerry.`;
     } else {
-      return super.introduce(this.name, this.age) + " I am a Teacher. I don't teach Jerry."
+      return `${super.introduce()} I am a Teacher. I don't teach Jerry.`;
     }
   }
 }
